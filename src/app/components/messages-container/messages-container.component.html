@@ -1,0 +1,5 @@
+@let groupedMessages = groupedMessages$ | async;
+
+@for (group of groupedMessages; track $index; let i = $index) {
+  <app-sender-message [messages]="group"></app-sender-message>
+}

@@ -1,0 +1,15 @@
+@for (message of processedMessages(); track $index; let i = $index) {
+  <div
+    class="message"
+    [ngClass]="{
+      'message-first': message.position === 'first',
+      'message-middle': message.position === 'middle',
+      'message-end': message.position === 'last',
+      'message-receiver': message.senderDetail.isReceiver,
+      'message-sender': !message.senderDetail.isReceiver,
+    }"
+    [style.color]="message.senderDetail.isReceiver ? undefined : message.senderDetail.nameColour"
+  >
+    {{ message.content }}
+  </div>
+}

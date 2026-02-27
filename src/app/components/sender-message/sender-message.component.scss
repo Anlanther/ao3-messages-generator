@@ -1,0 +1,23 @@
+.message {
+  padding: 4px;
+  gap: 4px;
+  max-width: 75vw;
+
+  &-receiver {
+    background-color: #dafdd3;
+    margin-right: auto;
+  }
+
+  &-sender {
+    background-color: #ffffff;
+  }
+
+  &-first {
+  }
+
+  &-middle {
+  }
+
+  &-last {
+  }
+}
