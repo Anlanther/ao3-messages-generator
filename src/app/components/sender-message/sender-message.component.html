@@ -1,0 +1,11 @@
+@for (message of processedMessages(); track $index; let i = $index) {
+  @if (!message.isLastMessage) {
+    <div class="sender-plain">
+      {{ message.content }}
+    </div>
+  } @else {
+    <div class="sender-end">
+      {{ message.content }}
+    </div>
+  }
+}
